@@ -182,10 +182,15 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ) , url(../img/people-office\ 1.jpg);
+
       background-repeat: no-repeat;
-    background-position: cover; 
+    background-size: cover; 
       text-align: center;
+
+      max-width: 1440px;
+      height: 600px;
       padding: 188px 0 ;
+      margin: 0 auto;
   }
   .hero-title {
 
@@ -227,18 +232,6 @@ margin: auto;
   
   /*------------------ FUTURES --------------------*/
   
-  .futures-icons-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding-bottom: 8px;
-  }
-
-  .futures-icons-item {
-    width: 264px;
-    height: 112px;
-    
-  }
  
   .futures-icons-link {
     width: 100%;
@@ -249,6 +242,7 @@ margin: auto;
     align-items: center;
     justify-content: center;
     fill: #8E8F99;
+    height: 112px;
   }
 
   .futures-icons-link:focus,
@@ -257,29 +251,26 @@ margin: auto;
   }
 
 
-  .futures-icons {
-   
-  }
-
 
 
   .futures {  
-    padding: 120px 0;
-  
+  padding: 120px 0 ;
+   
   }
-  .futures-list{
- 
+
+  .futures-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    
   }
   
 
 .futures-item {
-    margin-right: 24px;
     width: 264px;
   }
 
-  .futures-item:nth-child(4n) {
-    margin-right: 0;
-  }
+
   .visually-hidden {
       position: absolute;
       width: 1px;
@@ -304,6 +295,7 @@ margin: auto;
   /* NAVY BLUE */
   color: #2E2F42;
   margin-bottom: 8px;
+  margin-top: 8px;
   }
   
   .futures-text {
@@ -326,6 +318,7 @@ margin: auto;
   /*------------------ SLIDES --------------------*/
   
   .slides {
+  
      padding-bottom: 120px;
   }
   .slides-caption {
@@ -360,7 +353,6 @@ margin: auto;
   .team {
       background-color: #F4F4FD;
       padding-top: 120px;
-      padding-bottom: 120px;
   }
   .our-team {
       font-family: 'Roboto';
@@ -404,6 +396,7 @@ border-radius: 0px 0px 4px 4px;
   /* NAVY BLUE */
   color: #2E2F42;
  margin-bottom: 8px;
+ margin-top: 32px;
   }
   .team-title {
       /* Body */
@@ -425,10 +418,12 @@ border-radius: 0px 0px 4px 4px;
   justify-content: center;
   gap: 24px;
   margin-top: 8px;
+  padding-bottom: 32px;
 }
 .team-soc-item {
  width: 40px;
  height: 40px;
+ 
 }
 
 .team-soc-link {
@@ -440,42 +435,37 @@ border-radius: 0px 0px 4px 4px;
   background-color:var(--btn-background-color);
   fill: #FFFFFF;
   border-radius: 50%;
+  
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
 background-color: var(--btn-background-focus-color);
 }
-.team-soc-icon {
-
-}
 
 
-.team-text {
-    padding: 32px 0 ;
-}
+
 
 
 
 /*---------------------------- CUSTOMERS --------------------------*/
 
 .cutomer-flex{
-  padding-top: 120px;
-  padding-bottom: 120px;
+ padding: 120px 0 ;
   
 }
 .costpmers-title {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1var(--lh-title);
-  /* identical to box height, or 120% */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  /* identical to box height, or 111% */
   text-align: center;
   letter-spacing: 0.02em;
-  /* NAVY BLUE */
+  text-transform: capitalize;
+
   color: #2E2F42;
 
- margin-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .customers-list {
@@ -498,17 +488,18 @@ background-color: var(--btn-background-focus-color);
   justify-content: center;
   width: 100%;
   height: 100%;
-  border: 1px solid #8E8F99;
+  border: 1px solid currentColor;
 border-radius: 4px;
-fill: #8E8F99;
+color : #8E8F99;
 }
 
 .customers-link:hover,
 .customers-link:focus {
-fill: var(--btn-background-focus-color);
-border-color: var(--btn-background-focus-color);
+color: var(--btn-background-focus-color);
 }
+
 .cutomers-icon {
+  fill: currentColor;
 }
 
 /*------------------ PORTFOLIO --------------------*/
@@ -541,21 +532,21 @@ color: var(--text-color,#434455);
 padding-bottom: 32px;
 }
 
-/*------------------ PORTFOLIO - HERO --------------------*/
+/*------------------ PPORTFOLIO SLIDES --------------------*/
 
 
-.portfolio-hero {
-    text-align: center;
-    margin-bottom: 72px ;
-    margin-top: 96px;
-    
-}
 
-.portfolio-hero-list{
+
+.portfolio-btn-list{
     display: flex;
    justify-content: center;
+   text-align: center;
+    margin-bottom: 72px ;
+    margin-top: 96px;
+    gap: 24px;
+   
 }
-.portfolio-hero-btn {
+.portfolio-btn {
    font-family: 'Roboto';
 font-weight: 500;
 font-size: 16px;
@@ -578,31 +569,17 @@ letter-spacing: 0.04em;
 .portfolio-hero-btn:hover,
 .portfolio-hero-btn:focus{
 color: var(--first-title-color);
-background-color: var(--btn-background-focus-color)
-}
-.portfolio-hero-item {
-    margin-right: 24px;
-}
-
-.portfolio-hero-item:last-child{
-    margin-right: 0;
-}
-
-/*------------------ PPORTFOLIO SLIDES --------------------*/
-.portfolio-slides {
-  
+background-color: var(--btn-background-focus-color);
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-slides-list {
     display: flex;
     flex-wrap: wrap;
-    
+    gap: 48px 24px;
 }
 .portfolio-slides-item {
-    margin-right: 24px;
     width: 360px;
-    margin-bottom: 48px;
-    
 }
 
 .portfolio-slides-list, .portfolio-slides-item:nth-child(3n) {
@@ -717,6 +694,4 @@ margin-bottom: 16px;
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #31D0AA;
-}
-.footer-soc-icon {
 }
